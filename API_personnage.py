@@ -14,14 +14,13 @@ class Personnage:
         self.jauge_mana = jauge_mana
 
     @property
-    def get_pv_perso(self):
+    def is_alive(self):
         # Méthode pour vérifier si le personnage est en vie (PV > 0)
         return self.points_de_vie > 0
 
-    @property
-    def get_etat_perso(self):
+    def __str__(self):
         # Méthode pour afficher l'état actuel du personnage, y compris les points de magie disponibles
-        print(f"{self.nom} ({self.classe}) - PV : {self.points_de_vie} | Défense : {self.defense} | Attaque physique : {self.attaque_physique} | Attaque magique : {self.attaque_magique} | Jauge mana : {self.jauge_mana}")
+        return (f"{self.nom} ({self.classe}) - PV : {self.points_de_vie} | Défense : {self.defense} | Attaque physique : {self.attaque_physique} | Attaque magique : {self.attaque_magique} | Jauge mana : {self.jauge_mana}")
 
     # @property
     # def up_stats_perso(self):

@@ -11,13 +11,12 @@ class Boss:
         self.resistance = resistance
     
     @property
-    def get_pv_boss(self):
+    def is_alive(self):
         return self.points_de_vie > 0
 
-    @property
-    def get_etat_boss(self):
+    def __str__(self):
         # Méthode pour afficher l'état actuel du personnage, y compris les points de magie disponibles
-        print(f"{self.nom_boss} ({self.classe}) - PV : {self.points_de_vie} | Attaque : {self.attaque} | Défense : {self.defense} | Résistance : {self.resistance}")
+        return(f"{self.nom_boss} ({self.classe}) - PV : {self.points_de_vie} | Attaque : {self.attaque} | Défense : {self.defense} | Résistance : {self.resistance}")
         
     @property
     def get_nom_boss(self):
