@@ -108,7 +108,6 @@ class Donjon:
         if self.joueur.get_pv_perso and self.niveau == self.etages and not boss.get_pv_boss:
             
             print(f"\nFélicitaation ! Vous êtes venu a bout du donjon !")
-            # exit()
             
         if not self.joueur.get_pv_perso and self.niveau == self.etages and boss.get_pv_boss:
             if rencontre_boss == True:
@@ -123,6 +122,5 @@ class Donjon:
                 print(f"Vous avez été vaincu par les monstres de l'étage {self.niveau} ...")
             
             print(f"Vous n'avez pas été en mesure de sauver Éldoria, le Cercle de l'Aube Noir acheva sont oeuvre sans plus personne pour l'arrêter ...\n")
-            # exit()
         
     
